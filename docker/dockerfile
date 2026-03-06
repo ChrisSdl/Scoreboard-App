@@ -1,20 +1,18 @@
 # Base Image
 FROM python:3.12-slim
 
-# Arbeitsverzeichnis
+# Arbeitsverzeichnis im Container
 WORKDIR /app
 
 # Abhängigkeiten installieren
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Projekt kopieren
-COPY src/ ./src/
-COPY templates/ ./templates/
-COPY static/ ./static/
+# Applikation kopieren
+COPY app/ ./app/
 
-# Expose Flask Port
+# Flask Port
 EXPOSE 5000
 
-# Start
-CMD ["python", "src/app.py"]
+# Startbefehl
+CMD ["python", "app/app.py"]
