@@ -6,7 +6,7 @@ import os
 
 app = Flask(__name__)
 
-DB_FILE = "scoreboard.db"
+DB_FILE = "app/scoreboard.db"
 
 # ==================== Datenbank initialisieren ====================
 def init_db():
