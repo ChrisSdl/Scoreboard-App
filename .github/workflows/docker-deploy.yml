@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker Image
-        run: docker build -t deinusername/scoreboard-app:latest -f docker/Dockerfile .
+        run: docker build -t chrissdl/scoreboard-app:latest -f docker/Dockerfile .
 
       - name: Push Docker Image
-        run: docker push deinusername/scoreboard-app:latest
+        run: docker push chrissdl/scoreboard-app:latest
